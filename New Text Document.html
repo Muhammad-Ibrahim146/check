@@ -1,0 +1,55 @@
+<!DOCTYPE html
+<html lang="en">
+<head>>
+    <title>Document</title>
+    <style>
+    img{
+        height: 20%;
+        width: 30%;
+    }
+    </style>
+    <script>
+        function Name(nm)
+        {
+            var n=document.getElementById(nm).value;
+            alert(n);
+        }
+        function City()
+        {
+            var a=document.getElementById("al").value;
+            var c;
+            a=parseInt(a);
+            switch(a)
+            {
+                case 1:
+                c="karachi";
+                break;
+                case 2:
+                c="lahore";
+                break;
+                default:
+                c="Error";
+            }
+            document.getElementById("ct").value=c;
+        }
+        function expand()
+        {
+            var ex="Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate facilis minus magnam neque iure maxime ipsa tempora soluta animi ea!"
+            document.getElementById("pr").innerHTML=ex;
+        }
+    </script>
+</head>
+<body>
+
+    <form onsubmit="Name('ck')">
+    <input type="text" id='ck' onfocus="this.style.backgroundColor='yellow'" onblur="this.style.backgroundColor='white'" onmouseover="this.style.color='red'" onmouseout="this.style.color='black'">
+    <input type="text" id="al" onblur="City();">    
+    <input type="text" id="ct">
+    <input type="submit" value="Submit">
+</form>
+<p id="pr">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam animi eius quidem, deleniti suscipit dolores.</p><a onclick="expand();">Read More</a>
+<div>
+    
+</div>
+</body>
+</html>

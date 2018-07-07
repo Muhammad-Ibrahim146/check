@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+            var student={
+                name:"abc",
+                roll:123,
+                clss:1,
+                email:"abc@",
+                marks:[10,20,30],
+                result:function()
+                {
+                    var c=0;
+                    for(var i=0;i<this.marks.length;i++)
+                    {
+                            c+=this.marks[i];
+                    }
+                    if(c>=50)
+                    {
+                        return 'A';
+                    }
+                    else{
+                        return 'B';
+                    }
+                }
+            };
+        /*  function Student(name,clss,roll,marks)
+            {
+                this.name=name;
+                this.clss=clss;
+                this.roll=roll;
+                this.marks=marks;
+                this.result=function()
+                {
+                    var c=0;
+                    for(var i=0;i<this.marks.length;i++)
+                    {
+                        c+=this.marks[i];
+                    }
+                    alert(c);
+                    if(c>=60)
+                    {
+                        return 'A';
+                    }
+                    else{
+                        return 'B';
+                    }
+                };
+            }
+            */
+            function Student(name,clss,roll,marks)
+            {
+                this.name=name;
+                this.clss=clss;
+                this.roll=roll;
+                this.marks=marks;
+            }
+            Student.prototype.result=function()
+                {
+                    var c=0;
+                    for(var i=0;i<this.marks.length;i++)
+                    {
+                        c+=this.marks[i];
+                    }
+                    alert(c);
+                    if(c>=60)
+                    {
+                        return 'A';
+                    }
+                    else{
+                        return 'B';
+                    }
+                };
+                Student.prototype.email=undefined;
+            var st1=new Student("abc",1,23,[5,20,30]);
+            var st2=new Student("xbc",1,233,[30,20,30]);
+            st1.email="abc@";
+            var list=[];
+/*            for(var prop in student)
+            {
+                list.push(prop)
+            }
+            for(var prop in student)
+            {
+                document.writeln(prop)
+            }*/
+            
+            var where=window.location.assign("file:///C:/Users/Mohammad%20Ibrahim/Desktop/a.html");
+        </script>
+</head>
+<body>
+
+</body>
+</html>
